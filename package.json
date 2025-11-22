@@ -4,13 +4,17 @@
   "description": "Professional portfolio website for Fiverr web development services",
   "main": "script.js",
   "scripts": {
-    "start": "live-server --port=3000",
-    "dev": "live-server --port=3000"
+    "start": "serve",
+    "dev": "serve"
   },
-  "keywords": ["portfolio", "web-development", "fiverr"],
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "fiverr"
+  ],
   "author": "Tejas Kumar",
   "license": "MIT",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "serve": "^14.2.5"
   }
 }
