@@ -1,27 +1,26 @@
 {
-  "name": "last-portfolio",
+  "name": "tejas-kumar-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Tejas Kumar's personal portfolio website",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -p 8080",
     "build": "echo 'Building portfolio'",
-    "dev": "http-server -p 3000"
+    "dev": "npx serve -p 3000",
+    "start": "npx serve -p 3000"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tejasdiscord12-collab/portfolio.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "keywords": ["portfolio", "tejas kumar", "web development"],
+  "author": "Tejas Kumar",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tejasdiscord12-collab/portfolio/issues"
   },
   "homepage": "https://github.com/tejasdiscord12-collab/portfolio#readme",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "serve": "^14.2.0"
   }
 }
