@@ -1024,6 +1024,95 @@
             animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
+        /* Demo Notification Popup */
+        .notification-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(3px);
+        }
+
+        .notification-content {
+            background: var(--darker-bg);
+            border-radius: 12px;
+            border: 1px solid var(--primary);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 90%;
+            overflow: hidden;
+            animation: popupSlide 0.3s ease-out;
+        }
+
+        @keyframes popupSlide {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .notification-header {
+            padding: 20px;
+            background: var(--light-bg);
+            border-bottom: 1px solid rgba(30, 64, 175, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .notification-header h3 {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 1.5rem;
+        }
+
+        .close-btn {
+            font-size: 2rem;
+            color: var(--text-gray);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: var(--text-light);
+        }
+
+        .notification-body {
+            padding: 25px;
+        }
+
+        .notification-body p {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .notification-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .notification-footer {
+            padding: 20px;
+            background: var(--light-bg);
+            border-top: 1px solid rgba(30, 64, 175, 0.2);
+            text-align: right;
+        }
+
+        .notification-footer .btn {
+            margin: 0;
+            padding: 12px 25px;
+        }
+
         /* Responsive */
         @media (max-width: 992px) {
             .hero-content h1 {
@@ -1672,5 +1761,56 @@
             });
         });
     </script>
+    <!-- Demo Notification Popup -->
+    <div id="demoNotification" class="notification-popup">
+        <div class="notification-content">
+            <div class="notification-header">
+                <h3>Demo Portfolio</h3>
+                <span class="close-btn" id="closeNotification">&times;</span>
+            </div>
+            <div class="notification-body">
+                <p>This portfolio is for demonstration purposes only. No backend services are connected to the contact form or other interactive elements.</p>
+                <p>All content and projects are showcases of design and frontend development skills.</p>
+            </div>
+            <div class="notification-footer">
+                <button id="acceptNotification" class="btn">Got It</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Demo notification popup
+        document.addEventListener('DOMContentLoaded', function() {
+            const notification = document.getElementById('demoNotification');
+            const closeBtn = document.getElementById('closeNotification');
+            const acceptBtn = document.getElementById('acceptNotification');
+            
+            // Check if user has already accepted the notification
+            if (!localStorage.getItem('demoNotificationAccepted')) {
+                // Show notification after a short delay
+                setTimeout(function() {
+                    notification.style.display = 'flex';
+                }, 1000);
+            }
+            
+            // Close notification
+            function closeNotification() {
+                notification.style.display = 'none';
+                localStorage.setItem('demoNotificationAccepted', 'true');
+            }
+            
+            // Event listeners
+            closeBtn.addEventListener('click', closeNotification);
+            acceptBtn.addEventListener('click', closeNotification);
+            
+            // Close if clicked outside
+            notification.addEventListener('click', function(e) {
+                if (e.target === notification) {
+                    closeNotification();
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
