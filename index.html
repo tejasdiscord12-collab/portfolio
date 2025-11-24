@@ -65,6 +65,7 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(30, 64, 175, 0.2);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
         .header-content {
@@ -1687,6 +1688,9 @@
         // Hamburger Menu Functionality
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('header');
+        let lastScrollY = window.scrollY;
+        let headerVisible = true;
 
         hamburgerMenu.addEventListener('click', () => {
             hamburgerMenu.classList.toggle('active');
@@ -1699,6 +1703,30 @@
                 hamburgerMenu.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        // Hide header on scroll down, show on scroll up
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            // Only hide/show header if scrolled more than 100px
+            if (currentScrollY > 100) {
+                if (currentScrollY > lastScrollY && headerVisible) {
+                    // Scrolling down - hide header
+                    header.style.transform = 'translateY(-100%)';
+                    headerVisible = false;
+                } else if (currentScrollY < lastScrollY - 50 && !headerVisible) {
+                    // Scrolling up - show header
+                    header.style.transform = 'translateY(0)';
+                    headerVisible = true;
+                }
+            } else {
+                // Always show header at top of page
+                header.style.transform = 'translateY(0)';
+                headerVisible = true;
+            }
+            
+            lastScrollY = currentScrollY;
         });
 
         // Particles Animation
