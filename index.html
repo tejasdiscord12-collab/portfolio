@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejas Kumar Portfolio | Creative Developer</title>
+    <title>PrimeRealTech | Real Estate Technology Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset and Base Styles */
@@ -23,6 +23,10 @@
             --text-light: #f1f5f9;
             --text-gray: #94a3b8;
             --text-dark: #64748b;
+            /* Real estate theme colors */
+            --real-primary: #0d9488; /* teal */
+            --real-secondary: #0f766e; /* darker teal */
+            --real-accent: #ecfdf5; /* light mint */
         }
 
         body {
@@ -166,7 +170,7 @@
 
         .nav-links a:hover {
             color: var(--text-light);
-            background: rgba(30, 64, 175, 0.1);
+            background: rgba(13, 148, 136, 0.1);
         }
 
         .nav-links a::after {
@@ -253,7 +257,7 @@
         .btn {
             display: inline-block;
             padding: 14px 28px;
-            background: var(--primary);
+            background: var(--real-primary);
             color: var(--text-light);
             border: none;
             border-radius: 6px;
@@ -271,7 +275,7 @@
         }
 
         .btn:hover {
-            background: var(--secondary);
+            background: var(--real-secondary);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
@@ -313,8 +317,8 @@
             position: absolute;
             width: 200px;
             height: 200px;
-            background: rgba(30, 64, 175, 0.1);
-            border: 1px solid var(--primary);
+            background: rgba(13, 148, 136, 0.1);
+            border: 1px solid var(--real-primary);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -326,32 +330,32 @@
 
         .cube-face-front {
             transform: translateZ(100px);
-            background: rgba(30, 64, 175, 0.15);
+            background: rgba(13, 148, 136, 0.15);
         }
 
         .cube-face-back {
             transform: rotateY(180deg) translateZ(100px);
-            background: rgba(30, 41, 59, 0.15);
+            background: rgba(15, 118, 110, 0.15);
         }
 
         .cube-face-right {
             transform: rotateY(90deg) translateZ(100px);
-            background: rgba(14, 165, 233, 0.15);
+            background: rgba(236, 253, 245, 0.15);
         }
 
         .cube-face-left {
             transform: rotateY(-90deg) translateZ(100px);
-            background: rgba(30, 41, 59, 0.15);
+            background: rgba(15, 118, 110, 0.15);
         }
 
         .cube-face-top {
             transform: rotateX(90deg) translateZ(100px);
-            background: rgba(14, 165, 233, 0.15);
+            background: rgba(236, 253, 245, 0.15);
         }
 
         .cube-face-bottom {
             transform: rotateX(-90deg) translateZ(100px);
-            background: rgba(30, 64, 175, 0.15);
+            background: rgba(13, 148, 136, 0.15);
         }
 
         @keyframes rotate {
@@ -397,7 +401,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: var(--accent);
+            background: var(--real-primary);
             border-radius: 2px;
         }
 
@@ -429,14 +433,14 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: var(--primary);
+            border-color: var(--real-primary);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .service-icon {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--accent);
+            color: var(--real-primary);
             transition: all 0.3s ease;
         }
 
@@ -485,13 +489,13 @@
 
         .stat-item:hover {
             transform: translateY(-5px);
-            border-color: var(--primary);
+            border-color: var(--real-primary);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .stat-item h3 {
             font-size: 2.5rem;
-            color: var(--accent);
+            color: var(--real-primary);
             margin-bottom: 10px;
         }
 
@@ -518,7 +522,7 @@
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            border-color: var(--primary);
+            border-color: var(--real-primary);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
@@ -528,7 +532,7 @@
             top: 20px;
             right: 20px;
             font-size: 5rem;
-            color: rgba(14, 165, 233, 0.1);
+            color: rgba(13, 148, 136, 0.1);
             font-family: Georgia, serif;
             line-height: 1;
         }
@@ -551,7 +555,7 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: var(--primary);
+            background: var(--real-primary);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -592,7 +596,7 @@
         }
 
         .skill-category:hover {
-            border-color: var(--primary);
+            border-color: var(--real-primary);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
@@ -611,7 +615,7 @@
             left: 0;
             width: 50px;
             height: 3px;
-            background: var(--accent);
+            background: var(--real-primary);
             border-radius: 2px;
         }
 
@@ -639,7 +643,7 @@
 
         .skill-level {
             height: 100%;
-            background: var(--primary);
+            background: var(--real-primary);
             border-radius: 4px;
             position: relative;
         }
@@ -685,7 +689,7 @@
 
         .portfolio-item:hover {
             transform: translateY(-5px);
-            border-color: var(--primary);
+            border-color: var(--real-primary);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
@@ -1018,7 +1022,7 @@
         .particle {
             position: absolute;
             border-radius: 50%;
-            background: var(--neon-pink);
+            background: var(--real-primary);
             opacity: 0.7;
             animation: float 15s infinite linear;
             /* Add performance optimizations */
@@ -1369,7 +1373,7 @@
     </div>
     <header>
         <div class="container header-content">
-            <div class="logo">TEJAS KUMAR PORTFOLIO</div>
+            <div class="logo">PRIMEREALECH</div>
             <!-- Hamburger Menu -->
             <div class="hamburger-menu">
                 <span></span>
@@ -1393,25 +1397,25 @@
         <div class="container">
             <div class="hero-content">
                 <h1>
-                    <span class="name">Tejas Kumar</span>
-                    <span class="title">CREATIVE DEVELOPER</span>
+                    <span class="name">PRIMEREALECH</span>
+                    <span class="title">REAL ESTATE TECHNOLOGY</span>
                 </h1>
-                <p>I create stunning digital experiences with cutting-edge technology and innovative design. Let's build something extraordinary together.</p>
+                <p>Transforming property transactions with cutting-edge technology and data-driven solutions. Real-time monitoring, predictive analytics, and seamless digital experiences for modern real estate.</p>
                 <div>
-                    <a href="#portfolio" class="btn">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#portfolio" class="btn">Explore Solutions</a>
+                    <a href="#contact" class="btn btn-secondary">Request Demo</a>
                 </div>
             </div>
         </div>
         <!-- 3D Cube -->
         <div class="cube-container">
             <div class="cube">
-                <div class="cube-face cube-face-front">3D</div>
-                <div class="cube-face cube-face-back">DEV</div>
-                <div class="cube-face cube-face-right">WEB</div>
-                <div class="cube-face cube-face-left">APP</div>
-                <div class="cube-face cube-face-top">UI</div>
-                <div class="cube-face cube-face-bottom">UX</div>
+                <div class="cube-face cube-face-front">REAL</div>
+                <div class="cube-face cube-face-back">TECH</div>
+                <div class="cube-face cube-face-right">DATA</div>
+                <div class="cube-face cube-face-left">PROP</div>
+                <div class="cube-face cube-face-top">AI</div>
+                <div class="cube-face cube-face-bottom">ML</div>
             </div>
         </div>
     </section>
@@ -1437,26 +1441,26 @@
     <section id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Learn more about my background, experience, and what drives my passion for development</p>
+                <h2 class="section-title">About PrimeRealTech</h2>
+                <p class="section-subtitle">Revolutionizing real estate through innovative technology solutions</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm Tejas Kumar, a passionate Creative Developer with over 5 years of experience crafting digital experiences that blend innovative design with cutting-edge technology. My journey in the tech world began when I built my first website at the age of 15, and I've been hooked ever since.</p>
-                    <p>I specialize in creating responsive web applications, mobile interfaces, and brand identities that not only look stunning but also deliver exceptional user experiences. My approach combines technical expertise with creative thinking to solve complex problems in elegant ways.</p>
-                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or sharing my knowledge through tech meetups and mentoring sessions. I believe in continuous learning and staying ahead of industry trends to deliver the best possible solutions.</p>
+                    <p>PrimeRealTech is a leading technology company specializing in real estate solutions that transform how properties are bought, sold, and managed. Founded in 2020, we've been at the forefront of developing cutting-edge platforms that leverage AI, machine learning, and real-time data analytics.</p>
+                    <p>Our mission is to digitize and optimize every aspect of the real estate transaction process, from property discovery and valuation to closing and property management. We believe technology should simplify complex processes and provide transparent, data-driven insights to all stakeholders.</p>
+                    <p>With a team of experienced developers, data scientists, and real estate professionals, we create solutions that bridge the gap between traditional real estate practices and modern digital expectations. Our platforms are trusted by over 500 real estate agencies and 50,000+ property professionals.</p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
+                            <h3>500+</h3>
+                            <p>Real Estate Agencies</p>
                         </div>
                         <div class="stat-item">
-                            <h3>5+</h3>
-                            <p>Years Experience</p>
+                            <h3>50K+</h3>
+                            <p>Property Professionals</p>
                         </div>
                         <div class="stat-item">
-                            <h3>20+</h3>
-                            <p>Happy Clients</p>
+                            <h3>10M+</h3>
+                            <p>Properties Managed</p>
                         </div>
                     </div>
                 </div>
@@ -1468,66 +1472,66 @@
     <section id="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">My Skills</h2>
-                <p class="section-subtitle">A comprehensive overview of my technical abilities and expertise</p>
+                <h2 class="section-title">Our Expertise</h2>
+                <p class="section-subtitle">Cutting-edge technologies powering our real estate solutions</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend Development</h3>
+                    <h3>Data Analytics & AI</h3>
                     <div class="skill-item">
-                        <span class="skill-name">HTML5 & CSS3</span>
+                        <span class="skill-name">Machine Learning</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 95%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-name">Predictive Modeling</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 90%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">React</span>
+                        <span class="skill-name">Data Visualization</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 85%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Vue.js</span>
+                        <span class="skill-name">Big Data Processing</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 80%"></div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend Development</h3>
+                    <h3>Platform Development</h3>
                     <div class="skill-item">
-                        <span class="skill-name">Node.js</span>
+                        <span class="skill-name">Cloud Infrastructure</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 85%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Python</span>
+                        <span class="skill-name">Microservices</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 80%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">PHP</span>
+                        <span class="skill-name">API Development</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 75%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Database Design</span>
+                        <span class="skill-name">Database Architecture</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 80%"></div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Design & Tools</h3>
+                    <h3>User Experience</h3>
                     <div class="skill-item">
                         <span class="skill-name">UI/UX Design</span>
                         <div class="skill-bar">
@@ -1535,19 +1539,19 @@
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Figma</span>
+                        <span class="skill-name">Mobile Applications</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 85%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Adobe Creative Suite</span>
+                        <span class="skill-name">Dashboard Design</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 80%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Git & Version Control</span>
+                        <span class="skill-name">Real-time Monitoring</span>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 90%"></div>
                         </div>
@@ -1561,30 +1565,30 @@
     <section id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">My Services</h2>
-                <p class="section-subtitle">I offer a range of digital services to help your business stand out in the competitive online landscape</p>
+                <h2 class="section-title">Our Solutions</h2>
+                <p class="section-subtitle">Comprehensive technology solutions for the modern real estate industry</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Custom websites and web applications built with modern technologies for optimal performance and user experience. Responsive design for all devices.</p>
+                    <h3>Market Intelligence</h3>
+                    <p>Advanced analytics and predictive modeling to provide real-time market insights, pricing recommendations, and investment opportunities. Data-driven decision making for real estate professionals.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+                        <i class="fas fa-building"></i>
                     </div>
-                    <h3>UI/UX Design</h3>
-                    <p>User-centered designs that enhance engagement and conversion rates with intuitive interfaces and stunning visuals that captivate your audience.</p>
+                    <h3>Property Management</h3>
+                    <p>End-to-end property management platform with tenant screening, maintenance tracking, financial reporting, and automated rent collection. Streamline operations and maximize ROI.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-search"></i>
                     </div>
-                    <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile applications that deliver exceptional user experiences with smooth performance and modern design principles.</p>
+                    <h3>Smart Search & Matching</h3>
+                    <p>AI-powered property search with personalized recommendations based on buyer preferences, lifestyle factors, and investment goals. Intelligent matching for buyers and sellers.</p>
                 </div>
             </div>
         </div>
@@ -1594,49 +1598,49 @@
     <section id="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">My Portfolio</h2>
-                <p class="section-subtitle">A showcase of my recent projects and creative work that demonstrates my skills and expertise</p>
+                <h2 class="section-title">Our Solutions</h2>
+                <p class="section-subtitle">Innovative technology solutions transforming the real estate industry</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image-container">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="E-commerce Project" class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Real Estate Analytics Platform" class="portfolio-img">
                     </div>
                     <div class="portfolio-content">
-                        <span class="portfolio-category">Web Development</span>
-                        <h3>E-commerce Platform</h3>
-                        <p>Modern responsive e-commerce solution with product listings, shopping cart, and checkout functionality. Built with HTML, CSS, and JavaScript.</p>
+                        <span class="portfolio-category">Data Analytics</span>
+                        <h3>Real Estate Analytics Platform</h3>
+                        <p>Advanced analytics dashboard providing real-time market insights, pricing recommendations, and investment opportunities. Data-driven decision making for real estate professionals.</p>
                         <div class="portfolio-actions">
-                            <a href="ecommerce.html" class="btn">View Project</a>
-                            <a href="https://github.com/tejaskumar/ecommerce-project" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="ecommerce.html" class="btn">View Solution</a>
+                            <a href="https://github.com/tejaskumar/ecommerce-project" class="btn btn-secondary" target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image-container">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80" alt="Mobile App" class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80" alt="Property Management System" class="portfolio-img">
                     </div>
                     <div class="portfolio-content">
-                        <span class="portfolio-category">Mobile Design</span>
-                        <h3>Fitness Tracker App</h3>
-                        <p>Beautiful mobile application interface design for health and fitness tracking. Created with Figma and Adobe XD.</p>
+                        <span class="portfolio-category">Property Management</span>
+                        <h3>Property Management System</h3>
+                        <p>End-to-end property management platform with tenant screening, maintenance tracking, financial reporting, and automated rent collection. Streamline operations and maximize ROI.</p>
                         <div class="portfolio-actions">
-                            <a href="#" class="btn">View Project</a>
-                            <a href="https://github.com/tejaskumar/fitness-app" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="#" class="btn">View Solution</a>
+                            <a href="https://github.com/tejaskumar/fitness-app" class="btn btn-secondary" target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image-container">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Brand Identity" class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="AI-Powered Search" class="portfolio-img">
                     </div>
                     <div class="portfolio-content">
-                        <span class="portfolio-category">Branding</span>
-                        <h3>Tech Startup Identity</h3>
-                        <p>Complete brand identity package for emerging technology company. Includes logo, color palette, and brand guidelines.</p>
+                        <span class="portfolio-category">AI & Machine Learning</span>
+                        <h3>AI-Powered Property Search</h3>
+                        <p>Intelligent property search with personalized recommendations based on buyer preferences, lifestyle factors, and investment goals. Real-time data monitoring and predictive analytics.</p>
                         <div class="portfolio-actions">
-                            <a href="#" class="btn">View Project</a>
-                            <a href="https://github.com/tejaskumar/brand-identity" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="#" class="btn">View Solution</a>
+                            <a href="https://github.com/tejaskumar/brand-identity" class="btn btn-secondary" target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -1648,49 +1652,49 @@
     <section id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Client Testimonials</h2>
-                <p class="section-subtitle">Hear what my clients have to say about working with me</p>
+                <h2 class="section-title">Client Success Stories</h2>
+                <p class="section-subtitle">Hear what industry leaders have to say about our solutions</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Tejas transformed our online presence with a stunning website that perfectly captures our brand identity. His attention to detail and technical expertise made the entire process seamless."</p>
+                        <p>"PrimeRealTech's analytics platform transformed how we approach property valuation. Their real-time data monitoring and predictive analytics have increased our deal closure rate by 35%."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Marketing Director, TechStart Inc.</p>
+                            <h4>Robert Mitchell</h4>
+                            <p>CEO, Prestige Realty Group</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Working with Tejas was a game-changer for our mobile app project. His innovative approach and commitment to excellence resulted in an app that exceeded our expectations."</p>
+                        <p>"The property management system has streamlined our operations significantly. Automated rent collection and maintenance tracking have saved us over 200 hours monthly. A game-changer for our business."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="author-info">
-                            <h4>Michael Chen</h4>
-                            <p>CEO, Innovate Solutions</p>
+                            <h4>Jennifer Walsh</h4>
+                            <p>Operations Director, Urban Property Management</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"The UI/UX design Tejas created for our platform increased user engagement by 40%. His ability to understand our vision and translate it into a beautiful, functional design is remarkable."</p>
+                        <p>"Their AI-powered search solution has revolutionized how our agents match buyers with properties. Personalized recommendations based on lifestyle factors have improved client satisfaction scores by 45%."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="author-info">
-                            <h4>Emily Rodriguez</h4>
-                            <p>Product Manager, GrowthLabs</p>
+                            <h4>David Kim</h4>
+                            <p>Head of Technology, Elite Real Estate</p>
                         </div>
                     </div>
                 </div>
@@ -1702,20 +1706,20 @@
     <section id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Have a project in mind? Let's collaborate to create something amazing together</p>
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="section-subtitle">Ready to transform your real estate business with technology?</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Let's Connect</h3>
+                    <h3>Let's Transform Real Estate</h3>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>New Delhi, India</p>
+                                <h4>Headquarters</h4>
+                                <p>San Francisco, California</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1724,7 +1728,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p><a href="mailto:coretejas@gmail.com">coretejas@gmail.com</a></p>
+                                <p><a href="mailto:info@primerealech.com">info@primerealech.com</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1733,16 +1737,15 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p><a href="tel:+918750287172">+91 8750287172</a></p>
+                                <p><a href="tel:+14155550123">+1 (415) 555-0123</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1752,18 +1755,18 @@
                             <input type="text" id="name" placeholder="Enter your name">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="Enter your email">
+                            <label for="email">Business Email</label>
+                            <input type="email" id="email" placeholder="Enter your business email">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" placeholder="What is this regarding?">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" placeholder="Your company name">
                         </div>
                         <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" placeholder="Tell me about your project..."></textarea>
+                            <label for="message">How can we help?</label>
+                            <textarea id="message" placeholder="Tell us about your real estate technology needs..."></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn">Request Demo</button>
                     </form>
                 </div>
             </div>
@@ -1775,14 +1778,13 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <div class="footer-logo">TEJAS KUMAR PORTFOLIO</div>
-                    <p class="footer-text">Creating extraordinary digital experiences that push boundaries and inspire innovation in the digital world.</p>
+                    <div class="footer-logo">PRIMEREALECH</div>
+                    <p class="footer-text">Transforming real estate through innovative technology solutions. Data-driven insights for smarter property decisions.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1790,10 +1792,10 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Expertise</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#services">Solutions</a></li>
+                        <li><a href="#portfolio">Solutions</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -1816,7 +1818,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 Tejas Kumar Portfolio. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: var(--neon-pink);"></i>
+                &copy; 2025 PrimeRealTech. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: var(--neon-pink);"></i>
             </div>
         </div>
     </footer>
