@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/ecommerce.html",
+      "dest": "/ecommerce.html"
+    },
+    {
+      "src": "/ecommerce",
+      "dest": "/ecommerce.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
