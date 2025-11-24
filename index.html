@@ -65,6 +65,11 @@
             transition: transform 0.3s ease-in-out;
         }
 
+        /* Adjust header position when announcement bar is visible */
+        .desktop-announcement-bar + header {
+            top: 34px; /* Height of announcement bar */
+        }
+
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -81,6 +86,36 @@
 
         .logo:hover {
             color: var(--accent);
+        }
+
+        /* Desktop Announcement Bar */
+        .desktop-announcement-bar {
+            background: var(--accent);
+            color: var(--text-light);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .desktop-announcement-bar p {
+            margin: 0;
+            padding-right: 30px;
+        }
+
+        .close-announcement {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+            opacity: 0.8;
+        }
+
+        .close-announcement:hover {
+            opacity: 1;
         }
 
         /* Hamburger Menu */
@@ -1255,6 +1290,11 @@
                 box-shadow: none;
             }
 
+            /* Adjust hero padding when announcement bar is visible */
+            .desktop-announcement-bar + header + .hero {
+                padding-top: 154px; /* 34px for announcement bar + 120px original padding */
+            }
+
             .hero-content h1 {
                 font-size: 2.5rem;
             }
@@ -1299,6 +1339,16 @@
             .nav-links a {
                 font-size: 1.3rem;
             }
+
+            .desktop-announcement-bar p {
+                font-size: 0.8rem;
+                padding: 0 25px;
+            }
+
+            .close-announcement {
+                right: 15px;
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -1307,6 +1357,12 @@
     <div class="particles" id="particles"></div>
 
     <!-- Header -->
+    <div class="desktop-announcement-bar" id="desktopAnnouncementBar">
+        <div class="container">
+            <p>This website is optimized for desktop viewing. Some features may not display correctly on mobile devices.</p>
+            <span class="close-announcement" id="closeAnnouncementBar">&times;</span>
+        </div>
+    </div>
     <header>
         <div class="container header-content">
             <div class="logo">TEJAS KUMAR PORTFOLIO</div>
@@ -1964,6 +2020,27 @@
                 if (e.target === announcement) {
                     closeAnnouncement();
                 }
+            });
+
+            // Desktop announcement bar
+            const announcementBar = document.getElementById('desktopAnnouncementBar');
+            const closeAnnouncementBar = document.getElementById('closeAnnouncementBar');
+            
+            // Check screen size and show announcement bar for mobile users
+            if (window.innerWidth <= 768) {
+                // Check if user has already closed the announcement bar
+                if (!localStorage.getItem('desktopAnnouncementBarClosed')) {
+                    announcementBar.style.display = 'block';
+                }
+            } else {
+                // Hide on desktop
+                announcementBar.style.display = 'none';
+            }
+            
+            // Close announcement bar
+            closeAnnouncementBar.addEventListener('click', function() {
+                announcementBar.style.display = 'none';
+                localStorage.setItem('desktopAnnouncementBarClosed', 'true');
             });
         });
     </script>
