@@ -67,7 +67,7 @@
 
         /* Adjust header position when announcement bar is visible */
         .desktop-announcement-bar + header {
-            top: 34px; /* Height of announcement bar */
+            top: 36px; /* Height of announcement bar */
         }
 
         .header-content {
@@ -90,12 +90,15 @@
 
         /* Desktop Announcement Bar */
         .desktop-announcement-bar {
-            background: var(--accent);
-            color: var(--text-light);
+            background: #ff5500; /* Vibrant orange for better visibility */
+            color: white;
             text-align: center;
-            padding: 10px 0;
-            font-size: 0.9rem;
+            padding: 12px 0;
+            font-size: 0.95rem;
             position: relative;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .desktop-announcement-bar p {
@@ -110,8 +113,9 @@
             transform: translateY(-50%);
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--text-light);
-            opacity: 0.8;
+            color: white;
+            opacity: 0.9;
+            font-weight: 300;
         }
 
         .close-announcement:hover {
@@ -1292,7 +1296,7 @@
 
             /* Adjust hero padding when announcement bar is visible */
             .desktop-announcement-bar + header + .hero {
-                padding-top: 154px; /* 34px for announcement bar + 120px original padding */
+                padding-top: 156px; /* 36px for announcement bar + 120px original padding */
             }
 
             .hero-content h1 {
@@ -2026,15 +2030,10 @@
             const announcementBar = document.getElementById('desktopAnnouncementBar');
             const closeAnnouncementBar = document.getElementById('closeAnnouncementBar');
             
-            // Check screen size and show announcement bar for mobile users
-            if (window.innerWidth <= 768) {
-                // Check if user has already closed the announcement bar
-                if (!localStorage.getItem('desktopAnnouncementBarClosed')) {
-                    announcementBar.style.display = 'block';
-                }
-            } else {
-                // Hide on desktop
-                announcementBar.style.display = 'none';
+            // Show announcement bar on all devices for testing (will be hidden on desktop in production)
+            // Check if user has already closed the announcement bar
+            if (!localStorage.getItem('desktopAnnouncementBarClosed')) {
+                announcementBar.style.display = 'block';
             }
             
             // Close announcement bar
