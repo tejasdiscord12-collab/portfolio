@@ -1809,6 +1809,22 @@
                     closeNotification();
                 }
             });
+            
+            // Hide notification when user scrolls down
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                if (notification.style.display === 'flex') {
+                    // Clear any existing timeout
+                    clearTimeout(scrollTimeout);
+                    
+                    // Set a new timeout to hide the notification after scrolling stops
+                    scrollTimeout = setTimeout(function() {
+                        if (window.scrollY > 100) {
+                            closeNotification();
+                        }
+                    }, 100);
+                }
+            });
         });
     </script>
 
